@@ -108,6 +108,9 @@ static char *camera_fixup_getparams(int id, const char *settings)
     params.dump();
 #endif
 
+    params.set(android::CameraParameters::KEY_ROTATION, "0");
+
+
     // fix params here
     if (id == 0) {
         params.set(android::CameraParameters::KEY_SUPPORTED_PREVIEW_SIZES, previewSizesStr[id]);
